@@ -1,5 +1,5 @@
-import React, { useReducer, useEffect } from 'react';
-import {Navigate, Route, Routes, useNavigate } from 'react-router-dom';
+import React, { useReducer } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import Header from './Header';
 import Booking from './Booking';
 import ConfirmedBooking from './ConfirmedBooking';
@@ -24,7 +24,7 @@ const Main = () => {
         if(random() < 0.5) {
             result.push(i + ':00');
         }
-        if(random() > 0.5){
+        if(random() < 0.5){
             result.push(i + ':30');
         }
        }
@@ -33,7 +33,9 @@ const Main = () => {
 
     const submitAPI = function(formData){
         return true;
-    };
+    }
+
+ 
 
 
 
